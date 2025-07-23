@@ -23,7 +23,7 @@ $email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Secure hash
 
 // Check if NIC already exists
-$check = $conn->prepare("SELECT nic FROM users WHERE nic = ?");
+$check = $conn->prepare("SELECT nic FROM user WHERE NIC = ?");
 $check->bind_param("s", $nic);
 $check->execute();
 $check->store_result();
@@ -61,7 +61,7 @@ try {
     $mail->send();
 
     // If email sent successfully, store data temporarily with OTP
-    $insert = $conn->prepare("INSERT INTO user (nic, name, phone, email, password, otp_code, is_verified) VALUES (?, ?, ?, ?, ?, ?, 0)");
+    $insert = $conn->prepare("INSERT INTO user (NIC, full_name, phone_number, email, password, otp_code, is_verified) VALUES (?, ?, ?, ?, ?, ?, 0)");
     $insert->bind_param("ssssss", $nic, $name, $phone, $email, $password, $otp);
 
     if ($insert->execute()) {

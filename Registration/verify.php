@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$conn = new mysqli("localhost", "root", "", "ceylonconnect_db");
+$conn = new mysqli("localhost", "root", "", "ceylonconnect");
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
@@ -15,7 +15,7 @@ if (empty($email) || strlen($otp) !== 4) {
 }
 
 // Check for correct OTP and unverified user
-$sql = "SELECT * FROM users WHERE LOWER(email) = ? AND otp_code = ? AND is_verified = 0";
+$sql = "SELECT * FROM user WHERE LOWER(email) = ? AND otp_code = ? AND is_verified = 0";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $email, $otp);
 $stmt->execute();
@@ -23,13 +23,13 @@ $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
     // Correct OTP → mark verified
-    $update = "UPDATE users SET is_verified = 1, otp_code = NULL WHERE LOWER(email) = ?";
+    $update = "UPDATE user SET is_verified = 1, otp_code = NULL WHERE LOWER(email) = ?";
     $update_stmt = $conn->prepare($update);
     $update_stmt->bind_param("s", $email);
     $update_stmt->execute();
 
     // ✅ Redirect to login page
-    header("Location: login.html");  // Change to your actual login page
+    header("Location:../Login/Login1.html");  // Change to your actual login page
     exit();
 } else {
     // ❌ Invalid OTP
