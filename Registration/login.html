@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CeylonConnect - Login</title>
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="logo-group">
+      <img src="photos/logo.png" alt="CeylonConnect Logo" class="logo-img" />
+      <h1 class="logo-header">CeylonConnect</h1>
+    </div>
+
+    <!-- Login Card -->
+    <div class="card">
+      <!-- Left: Form -->
+      <div class="left">
+        <h2>Welcome Back!</h2>
+        <p>Login to continue sharing and exchanging</p>
+
+        <form action="login.php" method="POST">
+          <div class="input-box">
+            <input
+              type="text"
+              name="nic"
+              placeholder="User Name(NIC)"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <a href="reset-request.html" class="forgot">Forgot password?</a>
+
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p class="signup">
+          Don't have an account?
+          <a href="registration.html">Create a New Account</a>
+        </p>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="right">
+        <img src="photos/registration.PNG" alt="Illustration" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <p class="footer-bottom">
+      © 2025 CeylonConnect. All rights reserved. | Designed by CST 23 – UWU
+    </p>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notification - CeylonConnect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/notificationView.css"/>
+  <script defer src="scripts/notificationView.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-section">
+        <img src="images/logo.png" alt="CeylonConnect Logo" class="logo"/>
+        <span class="site-title">
+          <span class="c">C</span>eylon <span class="c">C</span>onnect
+        </span> 
+      </div>
+      <button class="back-button">Back</button>
+    </header>
+
+    <!-- Notification Card -->
+    <main class="notification-section">
+      <h1 class="notification-title">Notification</h1>
+      <div class="notification-flex-row">
+        <div class="notification-card">
+          <div class="notification-header">
+            <img src="images/profile_placeholder.png" alt="User" class="profile-img"/>
+            <div class="user-info">
+              <span class="user-name">Neha Patel</span>
+              <span class="exchange-text">Requested an exchange</span>
+            </div>
+            <span class="bell-icon">
+              <img src="images/bell.png" alt="Notification" />
+            </span>
+          </div>
+          <div class="skills-row">
+            <div>
+              <div class="label">Skill Offered</div>
+              <div class="value">Photography</div>
+            </div>
+            <div>
+              <div class="label">Skill Sought</div>
+              <div class="value">Graphic Design</div>
+            </div>
+          </div>
+          <div class="message-box">
+            <div class="msg-label">Message</div>
+            <div class="msg-text">Hello! I'm looking to exchange photography skills for graphic design</div>
+          </div>
+        </div>
+        <div class="notification-illustration">
+          <img src="images/notification.png" alt="Illustration"/>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="accept-btn">Accept</button>
+        <button class="decline-btn">Decline</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 CeylonConnect. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

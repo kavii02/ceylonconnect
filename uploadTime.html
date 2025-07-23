@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Availability - CeylonConnect</title>
+  <link rel="stylesheet" href="styles/uploadTime.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Upload Your Availability</h1>
+    </header>
+
+    <main class="form-container">
+      <form action="uploadAvailability.php" method="POST">
+        <label for="day">Select Day:</label>
+        <select name="day" id="day" required>
+          <option value="">--Select Day--</option>
+          <option value="Sunday">Sunday</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+        </select>
+
+        <label for="timeSlots">Available Time Slots:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="time[]" value="6.00 AM"> 6.00 AM - 7.00 AM</label>
+          <label><input type="checkbox" name="time[]" value="9.00 AM"> 8.00 AM - 9.00 AM </label>
+          <label><input type="checkbox" name="time[]" value="10.00 AM"> 10.00 AM - 11.00 AM</label>
+          <label><input type="checkbox" name="time[]" value="4.00 PM"> 2.00 PM - 4.00 PM</label>
+          <label><input type="checkbox" name="time[]" value="7.00 PM"> 5.00 PM - 7.00 PM</label>
+          <label><input type="checkbox" name="time[]" value="9.00 PM"> 8.00 PM - 10.00 PM</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Upload</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

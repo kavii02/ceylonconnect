@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #c2e2c3;
+  font-size: 16px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #f3e9da;
+  padding: 20px;
+  height: 100vh;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile h3 {
+  margin: 10px 0 5px;
+}
+
+.profile p {
+  color: black;
+}
+
+.profile-btn {
+  text-decoration: none;
+  background: #a259ff;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.nav-menu a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 12px;
+  margin: 10px 0;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-menu a:last-child {
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+.nav-menu a i {
+  margin-right: 10px;
+}
+
+.nav-menu a:hover {
+  background: white;
+}

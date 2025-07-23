@@ -1,0 +1,141 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #d6f5d6; /* pastel green */
+}
+
+/* Logo/Branding */
+.logo {
+  text-align: left;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #003322;
+}
+
+/* Container holding form and image */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffce9;
+  margin: 10px auto;
+  width: 85%;
+  height: 450px;
+  max-width: 800px;
+  border-radius: 20px;
+  padding: 15px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+/* Form section */
+.form-box {
+  flex: 1;
+  padding: 10px 20px;
+}
+/* Heading and subtext */
+.form-box h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #003322;
+}
+
+.form-box p {
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* Each input box */
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #90c3a7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 4px;
+  background-color: #f8fff8;
+}
+
+/* Icon inside input */
+.input-box .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Input field */
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+/* Submit button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #6d4c9f; /* purple */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #593d88;
+}
+
+/* Login link */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-link a {
+  color: #6d4c9f;
+  text-decoration: none;
+}
+
+/* Illustration section */
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+}
+/* Header styles */
+
+.logo-header {
+  font-size: 26px;
+  font-weight: bold;
+  color: #003322;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 50px;
+  color: #003322;
+}

@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #c2e2c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.profile-update-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.form-section {
+  flex: 1;
+}
+
+.image-section {
+  flex-shrink: 0;
+}
+
+.image-section img {
+  height: 600px; /* or 400px or more, adjust as needed */
+  width: auto;
+  object-fit: contain;
+}
+
+
+h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #1e1e1e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.image-preview img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.update-btn {
+  background-color: #1e734b;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 50%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  width: 50%;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .profile-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section img {
+    width: 220px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .image-section img {
+    height: 250px;
+    width: auto;
+    margin-top: 20px;
+  }
+} 
+

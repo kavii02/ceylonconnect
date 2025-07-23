@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #c2e2c3;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #f3e9da;
+  padding: 20px;
+  height: 100vh;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile h3 {
+  margin: 10px 0 5px;
+}
+
+.profile p {
+  color: black;
+}
+
+.profile-btn {
+  text-decoration: none;
+  background: #a259ff;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.nav-menu a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-menu a i {
+  margin-right: 10px;
+}
+
+.nav-menu a:hover {
+  background: white;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.profile-container {
+  width: 100%;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.card {
+  background-color: #f3e9da;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  color: #333;
+  font-size: 15px;
+}
+
+/*.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.summary i {
+  margin-right: 5px;
+}*/
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  background: #d2e6d2;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #222;
+}
+
+.tab.active {
+  background: #0c3d2e;
+  color: white;
+}
+
+/*.tab-content {
+  background: #f9f5e7;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  min-height: 100px;
+  color: #222;
+}*/
+
+/* Toggle Button */
+.toggle-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dropdown-tab {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  position: relative;
+  padding-right: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #d2e6d2;
+  min-width: 160px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  flex-direction: column;
+}
+
+.dropdown-content .tab {
+  border-radius: 0;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  background-color: #d2e6d2;
+}
+
+.dropdown-tab:hover .dropdown-content {
+  display: flex;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    height: 100%;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 70px 20px 20px 20px;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .summary {
+    flex-direction: column;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    border-radius: 10px;
+  }
+
+  .tab-content {
+    border-radius: 10px;
+  }
+
+  /*.reviews-section {
+  background: #f9f5e7;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);*/
+}
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces 3 columns */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+.review-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.review-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.review-card h4 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.review-card p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.review-card .read-more-btn {
+  display: inline-block;
+  background-color: #1e734b;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.review-card .read-more-btn:hover {
+  background-color: #145c3a;
+}
+
+
+
+

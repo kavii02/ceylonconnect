@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request an Exchange - CeylonConnect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/requestExchange.css"/>
+  <script defer src="scripts/requestExchange.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-section">
+        <img src="images/logo.png" alt="CeylonConnect Logo" class="logo"/>
+        <span class="site-title">
+          <span class="c">C</span>eylon <span class="c">C</span>onnect
+        </span> 
+      </div>
+      <button class="back-button">Back</button>
+    </header>
+
+    <!-- Main Form Section -->
+    <main class="form-container">
+      <h1 class="form-title">Request an Exchange</h1>
+      <div class="form-flex-row">
+        <!-- Form -->
+        <form id="exchange-form" class="exchange-form">
+          <!-- Skill I Offer -->
+          <div class="input-group">
+            <input type="text" id="skill-offer" name="skill-offer" placeholder=" " required />
+            <label for="skill-offer">Skill I Offer</label>
+          </div>
+
+          <!-- Skill I Seek -->
+          <div class="input-group">
+            <input type="text" id="skill-seek" name="skill-seek" placeholder=" " required />
+            <label for="skill-seek">Skill I Seek</label>
+          </div>
+
+          <!-- Message -->
+          <div class="input-group">
+            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Message</label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="send-button">Send Request</button>
+        </form>
+
+        <!-- Illustration -->
+        <div class="illustration">
+          <img src="images/exchange.png" alt="Exchange Illustration" />
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 CeylonConnect. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* General layout */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #dff1d6; /* Pastel green */
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+}
+
+/* Main heading */
+h1 {
+  color: #1e463a;
+}
+
+/* OTP form card layout */
+.card {
+  display: flex;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fffdf5; /* Light pastel */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 425px;
+}
+
+/* Left and right sides */
+.left,
+.right {
+  flex: 1;
+  padding: 40px;
+}
+
+.left h2 {
+  color: #003322;
+}
+
+.left p {
+  color: #003322;
+  margin-bottom: 20px;
+}
+
+/* OTP input layout */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* OTP input fields */
+.otp-inputs input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Verify button styling */
+button {
+  padding: 12px 30px;
+  background-color: #7f58af;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6942a6;
+}
+
+/* Resend link */
+.resend {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.resend a {
+  color: #6942a6;
+  text-decoration: none;
+}
+
+/* Image on right */
+.right img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Header styles */
+
+.logo-header {
+  font-size: 26px;
+  font-weight: bold;
+  color: #003322;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 80px;
+  color: #003322;
+}
+
+/* Logo group inside header */
+.logo-group {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}

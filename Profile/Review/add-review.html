@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Review</title>
+  <link rel="stylesheet" href="add-review.css" />
+</head>
+<body>
+ 
+  <div class="review-form-container">
+    <div class="form-image-wrapper">
+      <div class="form-section">
+        <h2>Post Your Review</h2>
+        <form action="submit-review.php" method="POST">
+
+          <label for="title">Review Title *</label>
+          <input type="text" id="title" name="title" placeholder="Enter review title" required>
+
+          <label for="description">Review Description</label>
+          <textarea id="description" name="description" placeholder="Enter review description"></textarea>
+
+          <label for="rating">Review Rating *</label>
+          <select id="rating" name="rating" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <div class="btn-group">
+            <button type="submit" class="add-btn">Add Review</button>
+            <a href="javascript:void(0);" onclick="history.back();" class="back-btn">Go Back</a>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="image-section">
+        <img src="images/Review (2).png" alt="Review Illustration" />
+      </div>
+    </div>
+  </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Sidebar + Profile</title>
+  <link rel="stylesheet" href="skill.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+
+  <!-- Toggle Button for Small Screens -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="profile">
+      <img src="../images/p1.jpg" alt="profile">
+      <h3>shaikh anas</h3>
+      <p>shaikh@gmail.com</p><br>
+      
+      <a href="../UpdateProfile/update-profile.html" class="profile-btn">Update Profile</a>
+    </div>
+    <nav class="nav-menu">
+      <a href="#"><i class="fas fa-home"></i> home</a>
+      <a href="#"><i class="fas fa-info-circle"></i> about us</a>
+      <a href="#"><i class="fas fa-envelope"></i> contact us</a>
+      <!--a href="review.html"><i class="fas fa-star"></i> Reviews & Ratings</a-->
+      <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+      <a href="../../uploadTime.html"><i class="fas fa-clock"></i> Time Slots</a>
+
+      <a href="#"><i class="fas fa-chalkboard-teacher"></i> Log Out</a>
+      
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="profile-container">
+      <div class="right-content">
+        <!--div class="card">
+          <h3>Full name</h3>
+          <p><i class="fas fa-info-circle"></i> Priya weerasekara</p>
+        </div>
+         <div class="card">
+                    <h3>Contact Information</h3>
+          <p><i class="fas fa-envelope"></i> priya@example.com</p>
+        </div-->
+
+        <!--div class="card">
+          <h3>Activity Summary</h3>
+          <div class="summary">
+            <span><i class="fas fa-search"></i> 3 Listings</span>
+            <span><i class="fas fa-handshake"></i> 5 Exchanges</span>
+            <span><i class="fas fa-star"></i> 12 R</span>
+          </div>
+        </div-->
+
+        <div class="tabs">
+          <div class="dropdown-tab">
+            <button class="tab dropdown-btn">My Skills <i class="fas fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="../Goods/goods.html" class="tab">Goods</a>
+              <a href="../Skill/skill.html" class="tab">Skills</a>
+            </div>
+          </div>
+        
+         
+
+          <button class="tab" onclick="window.location.href='../../skillPost.html'">Add Skill</button>
+          <button class="tab" onclick="window.location.href='../../skillWant.html'">Skill Want</button>
+
+        </div>
+
+        <div class="tab-content">
+          <!-- All Posts Button -->
+          <div class="all-posts-container">
+            <a href="../AllPost/profile.html" class="all-posts-btn">All Posts</a>
+          </div>
+         <div class="review-cards">
+            <div class="review-card">
+              <img src="../images/post_1.webp" alt="Post Image">
+              <h4>01 example post title</h4>
+              <p><i class="fas fa-star"></i> (0 reviews)</p>
+              <a href="../Review/review.html" class="read-more-btn">Read More</a>
+            </div>
+
+            <div class="review-card">
+              <img src="../images/post_2.webp" alt="Post Image">
+              <h4>02 example post title</h4>
+              <p><i class="fas fa-star"></i> (0 reviews)</p>
+              <a href="../Review/review.html" class="read-more-btn">Read More</a>
+            </div>
+
+            <div class="review-card">
+              <img src="../images/post_3.webp" alt="Post Image">
+              <h4>03 example post title</h4>
+              <p><i class="fas fa-star"></i> (0 reviews)</p>
+              <a href="../Review/review.html" class="read-more-btn">Read More</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+   <!-- JavaScript -->
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+    ;
+  </script>
+  <!--script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+
+    function switchTab(clickedTab) {
+      const allTabs = document.querySelectorAll('.tab');
+      allTabs.forEach(tab => tab.classList.remove('active'));
+      clickedTab.classList.add('active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const sidebar = document.querySelector('.sidebar');
+      const toggle = document.querySelector('.toggle-btn');
+      if (!sidebar.contains(event.target) && !toggle.contains(event.target)) {
+        sidebar.classList.remove('active');
+      }
+    });
+  </script-->
+
+</body>
+</html>

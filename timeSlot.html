@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Time Slot - CeylonConnect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/timeSlot.css"/>
+  <script defer src="scripts/timeSlot.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-section">
+        <img src="images/logo.png" alt="CeylonConnect Logo" class="logo"/>
+        <span class="site-title">
+          <span class="c">C</span>eylon <span class="c">C</span>onnect
+        </span> 
+      </div>
+      <button class="back-button">Back</button>
+    </header>
+
+    <!-- Main Booking Section -->
+    <main class="booking-container">
+      <h1 class="booking-title">Book a Time Slot</h1>
+
+      <!-- FORM START -->
+      <form id="bookingForm" action="php/gettimes.php" method="POST">
+        <div class="booking-flex-row">
+          <div class="slot-section">
+
+            <!-- Days Row -->
+            <div class="days-row">
+              <button type="button" class="day-btn" data-day="Sunday">S</button>
+              <button type="button" class="day-btn" data-day="Monday">M</button>
+              <button type="button" class="day-btn" data-day="Tuesday">T</button>
+              <button type="button" class="day-btn" data-day="Wednesday">W</button>
+              <button type="button" class="day-btn" data-day="Thursday">T</button>
+              <button type="button" class="day-btn" data-day="Friday">F</button>
+              <button type="button" class="day-btn" data-day="Saturday">S</button>
+            </div>
+
+            <!-- Time Slots -->
+            <div class="slots-grid">
+              <!-- Time slot buttons will be inserted here dynamically by JavaScript -->
+            </div>
+
+            <!-- Hidden fields to capture selected values -->
+            <input type="hidden" name="selected_day" id="selected_day" />
+            <input type="hidden" name="selected_time" id="selected_time" />
+
+          </div>
+
+          <!-- Illustration -->
+          <div class="illustration">
+            <img src="images/timeslot.png" alt="Calendar Illustration" />
+          </div>
+        </div>
+
+        <!-- Confirm Booking -->
+        <button type="submit" class="confirm-btn">Confirm</button>
+      </form>
+      <!-- FORM END -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 CeylonConnect. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

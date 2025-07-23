@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password - Step 2 | CeylonConnect</title>
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="logo-group">
+      <img src="photos/logo.png" alt="CeylonConnect Logo" class="logo-img" />
+      <h1 class="logo-header">CeylonConnect</h1>
+    </div>
+
+    <!-- Email Confirmation Card -->
+    <div class="card">
+      <!-- Left: Form -->
+      <div class="left">
+        <h2>Confirm Your Email</h2>
+        <p>Please enter your email address to receive the OTP</p>
+
+        <form action="send-reset-otp.php" method="POST">
+          <div class="input-box">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn">Send OTP</button>
+        </form>
+
+        <p class="signup">
+          Already have access? <a href="login.html">Login</a>
+        </p>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="right">
+        <img src="photos/registration.PNG" alt="Illustration" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <p class="footer-bottom">
+      © 2025 CeylonConnect. All rights reserved. | Designed by CST 23 – UWU
+    </p>
+  </body>
+</html>

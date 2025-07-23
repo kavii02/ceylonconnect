@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update Profile</title>
+  <link rel="stylesheet" href="update-profile.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="profile-update-container">
+    <div class="profile-wrapper">
+      <div class="form-section">
+        <h2>Update Profile</h2>
+        <form>
+          <label for="name">Update Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <!--label for="email">Update Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required-->
+
+          <label for="old-password">Old Password</label>
+          <input type="password" id="old-password" name="old-password" placeholder="Enter your old password">
+
+          <label for="new-password">New Password</label>
+          <input type="password" id="new-password" name="new-password" placeholder="Enter your new password">
+
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your new password">
+
+          <div class="image-preview">
+            <img src="profile.jpg" alt="Profile Picture">
+          </div>
+
+          <button type="button" class="delete-btn">Delete Image</button>
+
+          <label for="profile-pic">Update Pic</label>
+          <input type="file" id="profile-pic" name="profile-pic">
+
+          <div class="btn-group">
+            <button type="submit" class="update-btn">Update Now</button>
+            <a href="../AllPost/profile.html" class="back-btn">All Posts</a>
+          </div>
+        </form>
+      </div>
+      <div class="image-section">
+        <img src="images/Updateprofile.png" alt="update-profile">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

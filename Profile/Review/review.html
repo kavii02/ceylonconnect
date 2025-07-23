@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post Details</title>
+  <link rel="stylesheet" href="review.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="profile">
+      <img src="../images/p1.jpg" alt="profile">
+      <h3>shaikh anas</h3>
+      <p>shaikh@gmail.com</p><br>
+      
+      <a href="../UpdateProfile/update-profile.html" class="profile-btn">Update Profile</a>
+    </div>
+    <nav class="nav-menu">
+      <a href="#"><i class="fas fa-home"></i> home</a>
+      <a href="#"><i class="fas fa-info-circle"></i> about us</a>
+      <a href="#"><i class="fas fa-envelope"></i> contact us</a>
+      <!--a href="review.html"><i class="fas fa-star"></i> Reviews & Ratings</a-->
+      <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+      <a href="#"><i class="fas fa-clock"></i> Time Slots</a>
+
+      <a href="#"><i class="fas fa-chalkboard-teacher"></i> Log Out</a>
+      
+    </nav>
+  </div>
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="post-detail-container">
+      
+      <!-- Top Header with "All Posts" button -->
+      <div class="detail-header">
+        <h2 class="section-title">Post Details</h2>
+        <a href="../AllPost/profile.html" class="all-posts-btn">All Posts</a>
+      </div>
+
+      <!-- Post Details -->
+      <div class="post-detail-card">
+        <img src="../images/post_2.webp" alt="Post Image">
+        <div class="post-info">
+          <h3>02 example post title</h3>
+          <p><strong>0</strong> <i class="fas fa-star"></i> total 0 reviews</p>
+          <div class="rating-breakdown">
+            <p><i class="fas fa-star"></i> 5 Stars - 0</p>
+            <p><i class="fas fa-star"></i> 4 Stars - 0</p>
+            <p><i class="fas fa-star"></i> 3 Stars - 0</p>
+            <p><i class="fas fa-star"></i> 2 Stars - 0</p>
+            <p><i class="fas fa-star"></i> 1 Star  - 0</p>
+          </div>
+
+          <!-- Add Review Button -->
+          <a href="add-review.html" class="add-review-btn">Add Review</a>
+        </div>
+      </div>
+
+      <!-- User's Reviews -->
+      <h3 style="margin-top: 30px;">User's Reviews</h3>
+      <div class="user-reviews">
+        <p style="color: #777;">No Reviews Added Yet!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 30px;
+  background-color: #CDE8D5;;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  object-fit: cover;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.logo-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;  /* Changed from 00 to 400 for valid weight */
+  font-size: 20px;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;  /* if nav-links is a ul */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #AE88B0;
+  color: white;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Fixed header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Responsive for tablets and smaller */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px 10px;
+  }
+
+  .nav-links {
+    font-size: 16px;
+  }
+
+  .header-button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+a:hover {
+  color: #6a6a6a;          /* Change link color on hover (SeaGreen) *//* Add underline on hover */
+}
+
+.header-button:hover {
+  background-color: #ddb5df;  /* Darker green on hover */
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

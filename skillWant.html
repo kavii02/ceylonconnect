@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Gain - Ceylon Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/skillPost.css"/>
+  <script defer src="scripts/skillWant.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-section">
+        <img src="images/logo.png" alt="CeylonConnect Logo" class="logo"/>
+        <span class="site-title">
+          <span class="c">C</span>eylon <span class="c">C</span>onnect
+        </span> 
+      </div>
+      <button class="back-button">Back</button>
+    </header>
+
+    <!-- Main Form Section -->
+    <main class="form-container">
+      <h1 class="form-title">Gain a Skill</h1>
+      <div class="form-flex-row">
+
+       
+        <form id="skill-form" class="skill-form" action="php/gainSkill.php" method="post"  >
+          
+          <!-- Skill Title -->
+          <div class="input-group">
+            <select id="skill-title" name="skill-title" placeholder=" " required>
+              <option value="" disabled selected hidden></option>
+              <option value="web-development">Web Development</option>
+              <option value="programming">Programming</option>
+              <option value="microsoft-office">Microsoft Office</option>
+              <option value="graphic-design">Graphic Design</option>
+            </select>
+            <label for="skill-title">Skill Title</label>
+          </div>
+
+          <!-- Category -->
+          <div class="input-group">
+            <select id="category" name="category" placeholder=" " required>
+              <option value="" disabled selected hidden></option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Python">Python</option>
+            </select>
+            <label for="category">Category</label>
+          </div>
+
+          <!-- Description -->
+          <div class="input-group">
+            <input type="text" id="description" name="description" placeholder=" " required />
+            <label for="description">Description</label>
+          </div>
+
+          <!-- Level -->
+          <div class="input-group">
+            <select id="level" name="level" placeholder=" " required>
+              <option value="" disabled selected hidden></option>
+              <option value="Primary">Primary</option>
+              <option value="Secondary">Secondary</option>
+              <option value="Tertiary">Tertiary</option>
+            </select>
+            <label for="level">Level</label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="post-button">Post Skill</button>
+        </form>
+
+        <!-- Illustration -->
+        <div class="illustration">
+          <img src="images/skillPost.png" alt="Skill Illustration" />
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 CeylonConnect. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
