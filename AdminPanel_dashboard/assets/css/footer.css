@@ -1,0 +1,10 @@
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: #A3D3B1;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}

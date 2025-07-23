@@ -1,0 +1,245 @@
+/* Contact_us.css - Based on Post.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif; /* Or 'Poppins' if preferred */
+    background-color: #fdf5eb; /* Light background from Post.css */
+    color: #1a1a1a;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #CDE8D5; /* Header background from Post.css */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    line-height: 1;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    object-fit: cover;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.logo-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #000000;
+}
+
+/* Styles for navigation buttons in top-bar */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.nav-buttons a:hover {
+    background-color: #e9f6ef;
+}
+
+.nav-buttons a.active {
+    background-color: #7a987e; /* Highlight for active link */
+    color: white;
+}
+
+.nav-buttons .back-btn { /* Reusing back-btn style for Sign In/Sign Up/Sign Out */
+    background-color: #ffffff;
+    border: 2px solid #7a987e;
+    border-radius: 20px;
+    padding: 6px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, border 0.2s;
+}
+
+.nav-buttons .back-btn:hover {
+    background-color: #e9f6ef;
+    border-color: #10331e;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #dcf1e5; /* Container background from Post.css */
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    min-height: 500px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.form-section {
+    flex: 1.1;
+    margin-right: 30px;
+}
+
+.form-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+/* Specific style for the tagline on the contact page */
+.contact-tagline {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    text-align: left; /* Adjust as needed */
+}
+
+.contact-form { /* Renamed from 'form' to 'contact-form' for specificity if needed */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form label {
+    font-weight: 600; /* Made labels slightly bolder */
+    color: #333;
+    margin-bottom: -10px; /* Adjust spacing */
+}
+
+
+.contact-form input[type="tel"], /* Specific input types for contact form */
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff0d9; /* Input background from Post.css */
+    color: #1a1a1a;
+    font-family: inherit; /* Inherit font from body */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: #9c78a0; /* Submit button color from Post.css */
+    color: white;
+    padding: 10px 20px; /* Adjusted padding for a larger button */
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Keeps button to the right */
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    width: auto; /* Allow button to size naturally */
+    min-width: 120px; /* Minimum width for consistency */
+    margin-right: 0; /* Remove negative margin */
+}
+
+.submit-btn:hover {
+    background-color: #815b8c; /* Hover color from Post.css */
+}
+
+.illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.illustration-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #555;
+    background: #fdf5eb;
+    margin-top: 40px;
+    border-radius: 0 0 16px 16px; /* Retain rounded corners if consistent with overall design */
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 20px;
+        padding: 20px;
+        gap: 20px;
+    }
+    .form-section {
+        margin-right: 0;
+    }
+    .illustration {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+    .logo span {
+        font-size: 1.2rem;
+    }
+    .container {
+        margin: 8px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .nav-buttons a, .nav-buttons .back-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

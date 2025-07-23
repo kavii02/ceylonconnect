@@ -1,0 +1,116 @@
+body {
+    /* Ensure the body font is consistent with your design.
+       Based on the provided 'Post.css' and 'Contact_us.css', it's 'Segoe UI'. */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Other body styles like background-color can be added here if this is a standalone CSS for the whole page */
+}
+
+.top-bar {
+    background-color: #CDE8D5; /* Light green header background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Subtle shadow for depth */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo image and text */
+    line-height: 1;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the logo circular */
+    border: 2px solid #333; /* Dark border around the logo */
+    object-fit: cover;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hover Effect for logo image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    display: block;
+}
+
+.logo-img:hover {
+    transform: translateY(-4px); /* Lifts the logo slightly */
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #000000; /* Black color for logo text */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px; /* Space between navigation items */
+    align-items: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #1a1a1a; /* Dark text color for links */
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px; /* Rounded corners for links */
+    /* Hover Effect for navigation links */
+    transition: background-color 0.2s; /* Smooth background change */
+}
+
+.nav-buttons a:hover {
+    background-color: #e9f6ef; /* Light green background on hover */
+}
+
+.nav-buttons a.active {
+    background-color: #7a987e; /* Darker green for the active link */
+    color: white; /* White text for active link */
+}
+
+.nav-buttons .back-btn { /* Applies to Sign In, Sign Up, Sign Out buttons */
+    background-color: #ffffff; /* White background for buttons */
+    border: 2px solid #7a987e; /* Border matching the active link color */
+    border-radius: 20px; /* Rounded corners for buttons */
+    padding: 6px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    /* Hover Effect for buttons */
+    transition: background 0.2s, border 0.2s; /* Smooth transitions */
+}
+
+.nav-buttons .back-btn:hover {
+    background-color: #e9f6ef; /* Light green background on button hover */
+    border-color: #10331e; /* Darker border on button hover */
+}
+
+/* --- Responsive Styles for Navbar --- */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column; /* Stacks items vertically on small screens */
+        align-items: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+    .logo span {
+        font-size: 1.2rem;
+    }
+    .nav-buttons {
+        flex-direction: column; /* Stacks navigation links/buttons vertically */
+        width: 100%;
+        align-items: flex-start;
+    }
+    .nav-buttons a, .nav-buttons .back-btn {
+        width: 100%; /* Makes links/buttons take full width */
+        text-align: center;
+    }
+}
