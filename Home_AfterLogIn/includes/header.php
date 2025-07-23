@@ -1,40 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ceylon Connect</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
 <?php
-session_start();
+// This line should be at the very top of your PHP file, before any HTML output
 $isLoggedIn = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true;
 ?>
 
-<div class="header-container">
-    <div class="logo-title">
-        <img src="assets/images/logo.png" alt="Ceylon Connect Logo" class="logo-img">
-        <h1>CeylonConnect</h1>
+<header class="top-bar">
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="CeylonConnect Logo" class="logo-img">
+        <span>CeylonConnect</span>
     </div>
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <nav class="nav-buttons">
+        <a href="/CeylonConnect/Home/Home.php">Home</a>
+        <a href=" ">About Us</a>
+        <a href="/CeylonConnect/Contact_us/Contact_us.php">Contact Us</a>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
 
-            <?php if (!$isLoggedIn): ?>
-                <!-- Links for NOT logged-in users -->
-                <li><button class="header-button" onclick="window.location.href='/cst22056C/Login/Login1.html'">Sign In</button></li>
-                <li><button class="header-button" onclick="window.location.href='/cst22056C/Registration/registration.html'">Sign Up</button></li>
-            <?php else: ?>
-                <!-- Links for logged-in users -->
-                <li><a href="/cst22056C/Profile/AllPost/profile.html">Profile</a></li>
-                <li><button class="header-button" onclick="window.location.href='logout.php'">Sign Out</button></li>
-            <?php endif; ?>
-        </ul>
+            <a href="/cst22056C/Profile/AllPost/profile.html">Profile</a>
+            <button class="back-btn" onclick="window.location.href='logout.php'">Sign Out</button>
+
     </nav>
-</div>
-</body>
-</html>
+</header>
