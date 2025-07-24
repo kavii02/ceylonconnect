@@ -73,8 +73,8 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
                 <img class="header-browser-image" src="assets/images/ratings.png" alt="Ratings Icon">
             </div>
             <div class="header-container-details-browse">
-                <h1 class="header-browser-title">Leave Ratings</h1>
-                <p class="header-browser-subtitle">Rate your exchange experiences</p>
+                <h1 class="header-browser-title">Your Feedbacks</h1>
+                    <p class="header-browser-subtitle">For our future use</p>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ $isLoggedIn = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] 
     <link rel="stylesheet" href="assets/css/header.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <nav class="nav-buttons">
-        <a href="/ceylonconnect/Home/Home.php">Home</a>
+        <a href="/ceylonconnect/Home_AfterLogIn/HomeAfter.php">Home</a>
         <a href="/ceylonconnect/aboutus.html">About Us</a>
         <a href="/ceylonconnect/Contact_us/Contact_us.php">Contact Us</a>
 

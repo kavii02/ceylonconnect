@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 40px 0 40px;
+  padding: 40px 40px 0 40px;
   background-color: #F3E9DA;
   flex-wrap: wrap;
   margin: 0;
@@ -261,6 +261,7 @@ body {
   transition: background-color 0.2s ease;
   margin-top: 1rem;
   margin-left: 100px;
+  text-decoration: none;
 }
 
 .search-btn-container {

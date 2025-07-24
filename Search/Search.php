@@ -107,6 +107,7 @@
     </div>
   </div>
   <div class="search-btn-container full-width-btn">
+    <a href="/ceylonconnect/Home_AfterLogIn/HomeAfter.php" class="search-btn">Back</a>
   <button class="search-btn">Search</button>
 </div>
 </div>
