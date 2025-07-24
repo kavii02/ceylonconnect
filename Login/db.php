@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = "Mihini123"; // your real MySQL password
+$password = ""; // your real MySQL password
 $dbname = "ceylonconnect"; // your correct database
 
 $conn = new mysqli($host, $username, $password, $dbname);

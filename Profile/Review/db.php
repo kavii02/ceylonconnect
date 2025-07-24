@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Mihini123";  // or your MySQL root password if you set one
+$password = "";  // or your MySQL root password if you set one
 $dbname = "ceylonconnect";  // your imported database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);

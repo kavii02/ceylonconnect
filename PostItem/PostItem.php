@@ -130,7 +130,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span>CeylonConnect</span>
         </div>
         <nav class="nav-buttons">
-            <button class="back-btn" onclick="window.history.back()">Back</button>
+           <button class="back-btn" onclick="window.location.href='/ceylonconnect/Profile/Goods/goods.html'">Back</button>
+
         </nav>
     </header>
 
