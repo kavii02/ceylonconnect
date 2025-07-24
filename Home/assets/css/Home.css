@@ -35,7 +35,7 @@ body {
   display: flex; /* Use flexbox layout */
   justify-content: space-between; /* Space elements evenly */
   align-items: center; /* Center items vertically */
-  padding: 100px 40px 0 40px; /* Padding for header */
+  padding: 40px 40px 0 40px; /* Padding for header */
   background-color: #F3E9DA; /* Background color */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
