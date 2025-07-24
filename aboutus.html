@@ -1,78 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Ceylon Connect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/aboutus.css" />
-  <script defer src="scripts/about.js"></script>
-</head>
-<body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="logo-section">
-        <img src="images/logo.png" alt="CeylonConnect Logo" class="logo" />
-        <span class="site-title">
-          <span class="c">C</span>eylon <span class="c">C</span>onnect
-        </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - CeylonConnect</title>
+    <link rel="stylesheet" href="styles/aboutus.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-group">
+          <img
+            src="images/logo.png"
+            alt="CeylonConnect Logo"
+            class="logo-img"
+          />
+
+          <h1 class="logo-header">CeylonConnect</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="/ceylonconnect/Home_AfterLogIn/HomeAfter.php">Home</a>
+          <a href="#" class="active">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Sign In</a>
+        </nav>
       </div>
-      <button class="back-button" onclick="history.back()">Back</button>
     </header>
 
-    <!-- About Content -->
-    <main class="about-container">
-      <section class="intro">
-        <h1>Who We Are</h1>
+    <main class="container">
+      <h1 class="page-title">About Us</h1>
+
+      <!-- Who We Are Section -->
+      <section class="about-section">
+        <h2 class="section-title">
+          <div class="section-icon">👥</div>
+          Who We Are?
+        </h2>
         <div class="section-content">
-          <img src="images/why.PNG" alt="Our Team" class="about-img" />
-          <p id="p1">The team behind <strong>CeylonConnect</strong> is a passionate group of individuals dedicated to creating a space where skills, knowledge, and goods can be exchanged — without money. We are designers, developers, and visionaries working to promote kindness, learning, and collaboration across communities.</p>
+          <div class="content-text">
+            <p>
+              The team behind CeylonConnect are a passionate group of innovators
+              committed to creating a platform where individuals can share
+              skills, knowledge and every day things, without having to use
+              conventional currency. We believe that everyone has something
+              valuable to contribute from all walks of life, to promote
+              Kindness, Learning and Collaboration. We built our platform out of
+              desire to foster community connection, sustainability, safe, and
+              rewarding.
+            </p>
+            <p>
+              What makes us flexible, we are a movement toward collaboration,
+              skill building, caring for each other of sharing and cutting on
+              plastic.
+            </p>
+          </div>
+          <div class="content-image">
+            <div class="illustration">
+              <img src="images/why.PNG" alt="Goods Icon" />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="mission">
-        <h1>Our Aim</h1>
+      <!-- Our App Section -->
+      <section class="about-section">
+        <h2 class="section-title">
+          <div class="section-icon">📱</div>
+          Our App
+        </h2>
         <div class="section-content">
-          <img src="images/aim.PNG" alt="Our Mission" class="about-img" />
-          
-            <p id="p2">To develop a user-friendly barter system that encourages people to share their talents and resources in a secure and rewarding environment.</p>
-          
+          <div class="content-text">
+            <p>
+              CeylonConnect works by allowing users to create a profile where
+              they can list the skills or goods they are willing to offer and
+              specify what they are looking for in return. Users can then browse
+              or search through other members’ offers using keywords and filters
+              to find a suitable match. Once they find an offer that meets their
+              needs, they can send a request to the other user, negotiate the
+              terms of the exchange, and agree on a time and place either online
+              or in person to complete the exchange. Afterward, both parties can
+              leave reviews about the experience, helping build trust and
+              reputation within the community. Throughout the process, no money
+              is involved; instead, it’s all about sharing, learning, and
+              supporting each other
+            </p>
+          </div>
+          <div class="content-image">
+            <div class="illustration">
+              <img src="images/aim.PNG" alt="aim" />
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-text">
+              <strong>Our Aim</strong>
+              To create an inclusive and user-friendly online platform where
+              individuals can exchange skills and goods, fostering a supportive
+              community rooted in sharing, learning, and sustainability
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-text">
+              <strong>Our Main Objectives</strong>
+              <ul>
+                <li>
+                  To build a secure web platform for listing and exchanging
+                  skills/goods.
+                </li>
+                <li>To allow keyword-based searching and filtered browsing.</li>
+                <li>
+                  To support time-slot booking, rating/review, and request
+                  handling.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📅</div>
+            <div class="feature-text">
+              <strong>Smart Search & Booking System</strong>
+              <ul>
+                <li>
+                  To allow localized discovery, searching and filtered browsing.
+                </li>
+                <li>
+                  To support time-slot booking, rating/reviews, and request
+                  handling.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="objectives">
-        <h1>Our Objectives</h1>
+      <!-- What We Offer Section -->
+      <section class="about-section">
+        <h2 class="section-title">
+          <div class="section-icon">🎁</div>
+          What We Offer
+        </h2>
         <div class="section-content">
-          <img src="images/trust.png" alt="Our Objectives" class="about-img" />
-          <ul>
-            <li>Build a secure web platform for listing and exchanging skills/goods.</li>
-            <li>Enable keyword-based searching and filtered browsing.</li>
-            <li>Support time-slot booking, rating/review, and request handling features.</li>
-          </ul>
+          <div class="content-text">
+            <p>
+              In the digital age, people often have unused skills or items but
+              face financial barriers to getting what they need. Unlike typical
+              buy-sell platforms, this offers a space for non-monetary exchange,
+              promoting giving and learning, especially for students and young
+              professionals.
+            </p>
+          </div>
+          <div class="content-image">
+            <div class="illustration">
+              <img src="images/helpforothers.PNG" alt="aim" />
+            </div>
+          </div>
         </div>
-      </section>
 
-      <section class="offers">
-        <h2>What We Offer</h2>
-        <div class="section-content">
-          <img src="images/helpforothers.PNG" alt="What We Offer" class="about-img" />
-          <ul class="offer-list">
-            <li>Create a profile to showcase your skills and goods.</li>
-            <li>Post offers and explore what others are sharing.</li>
-            <li>Connect with people based on mutual needs.</li>
-            <li>Exchange skills and goods securely, without monetary transactions.</li>
-            <li>Communicate easily via our built-in messaging system.</li>
-            <li>Leave reviews to build trust and community reputation.</li>
-          </ul>
+        <div class="offer-grid">
+          <div class="offer-item">
+            <h3>📋 Profile & Listings</h3>
+            <ul>
+              <li>Create a profile to showcase your skills and goods</li>
+              <li>List items, services and connect with others in your area</li>
+              <li>Connect with people based on mutual needs</li>
+              <li>Exchange skills and goods securely without using money</li>
+            </ul>
+          </div>
+
+          <div class="offer-item">
+            <h3>💬 Communication</h3>
+            <ul>
+              <li>Communicate easily through our built-in messaging system</li>
+            </ul>
+          </div>
+
+          <div class="offer-item">
+            <h3>⭐ Reviews & Trust</h3>
+            <ul>
+              <li>Leave reviews and build trust within the community</li>
+            </ul>
+          </div>
+
+          <div class="offer-item">
+            <h3>🔒 Trust & Safety</h3>
+            <ul>
+              <li>Secure platform with user verification</li>
+              <li>Safe exchange environment</li>
+              <li>Community-driven trust system</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2025 CeylonConnect. All rights reserved.</p>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Popular Categories</h4>
+          <p>Appliances</p>
+          <p>Main Course</p>
+          <p>Drinks</p>
+          <p>Beverages</p>
+        </div>
+        <div class="footer-column">
+          <h4>Get to Know Us</h4>
+          <p>About Us</p>
+          <p>Our Story</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <p>Home</p>
+          <p>Offers & Discounts</p>
+          <p>Account</p>
+        </div>
+        <div class="footer-column">
+          <h4>Customer Support</h4>
+          <p>Help Center</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="footer-column">
+          <h4>Powered by</h4>
+          <p>Uva Wellassa University of Sri Lanka</p>
+          <p>Faculty of Technological Studies</p>
+          <p>Department of Information and Communication Technology</p>
+          <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms and Conditions</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 CeylonConnect. All rights reserved. | Designed by CST 23 – UWU
+        </p>
+      </div>
     </footer>
-  </div>
-</body>
+  </body>
 </html>

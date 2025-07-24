@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <span>CeylonConnect</span>
     </div>
     <nav class="nav-buttons">
-        <button class="back-btn" onclick="window.location.href='signin.php'">Back</button>
+        <button class="back-btn" onclick="window.location.href='/ceylonconnect/Home_AfterLogIn/HomeAfter.php'">Back</button>
     </nav>
   </header>
 
