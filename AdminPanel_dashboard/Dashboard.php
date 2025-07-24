@@ -7,8 +7,8 @@ if ($conn->connect_error) {
 // Fetch Data
 $totalUsers = $conn->query("SELECT COUNT(*) AS count FROM user")->fetch_assoc()['count'];
 $visitedUsers = 0; // Not tracked yet
-$postedItems = $conn->query("SELECT COUNT(*) AS count FROM goods")->fetch_assoc()['count'];
-$exchangeRequests = 0; // Not available yet
+$postedItems = $conn->query("SELECT COUNT(*) AS count FROM post_goods")->fetch_assoc()['count'];
+$exchangeRequests = $conn->query("SELECT COUNT(*) AS count FROM exchange_request")->fetch_assoc()['count'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@ $exchangeRequests = 0; // Not available yet
     <div class="main-layout">
         <div class="sidebar">
             <a href="Dashboard.php" class="side-button active">Dashboard</a>
-            <a href="manageUsers.php" class="side-button">Users</a>
+            <a href="/CeylonConnect/AdminPanel_users/Users.php" class="side-button">Users</a>
         </div>
 
         <div class="container">
@@ -37,7 +37,7 @@ $exchangeRequests = 0; // Not available yet
                 <div class="card">Registered Users: <?= $totalUsers ?></div>
                 <div class="card">Visited Users: Not Tracked</div>
                 <div class="card">Posted Items: <?= $postedItems ?></div>
-                <div class="card">Exchange Requests: Not Available</div>
+                <div class="card">Exchange Requests: <?$exchangeRequests</div>
             </div>
 
             <div class="chart-container">
