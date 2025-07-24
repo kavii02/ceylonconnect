@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = ""; // XAMPP default
+$password = "Mihini123"; // XAMPP default
 $dbname = "ceylonconnect"; // Use your actual DB name from Workbench
 
 $conn = new mysqli($host, $username, $password, $dbname);
