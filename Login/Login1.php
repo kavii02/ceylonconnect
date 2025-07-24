@@ -8,8 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'] ?? '';
 
     // Prepare SQL query to fetch user by email (case-insensitive)
-    $stmt = $conn->prepare("SELECT user_id, full_name, password FROM user WHERE LOWER(email) = ? AND is_verified = 1");
-
+    $stmt = $conn->prepare("SELECT user_id, full_name, password FROM user WHERE LOWER(email) = ? AND is_verified =1");
     $stmt->bind_param("s", $email);
 
     if ($stmt->execute()) {

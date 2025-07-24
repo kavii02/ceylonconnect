@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php'; // since db.php is also in Login folder
+require 'db.php'; // db.php is in the Login folder
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nic = trim($_POST['nic']);
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows === 1) {
-        $_SESSION['nic'] = $nic;
+        $_SESSION['nic'] = $nic; // Set session variable correctly
         header("Location: enter-email.html"); // also in Login folder
         exit();
     } else {
