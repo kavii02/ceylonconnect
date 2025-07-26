@@ -11,9 +11,9 @@ $isLoggedIn = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] 
     <link rel="stylesheet" href="assets/css/header.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <nav class="nav-buttons">
-        <a href="/CeylonConnect/Home/Home.php">Home</a>
+        <!-- <a href="/CeylonConnect/Home/Home.php">Home</a>
         <a href=" ">About Us</a>
-        <a href="/CeylonConnect/Contact_us/Contact_us.php">Contact Us</a>
+        <a href="/CeylonConnect/Contact_us/Contact_us.php">Contact Us</a> -->
 
 
             <a href="/cst22056C/AdminPanel_dashboard/Dashboard.html">Users</a>

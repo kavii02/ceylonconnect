@@ -4,9 +4,10 @@ require 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $entered_otp = trim($_POST['otp'] ?? '');
+    $new_password = trim($_POST['password'] ?? '');
 
-    if (empty($entered_otp)) {
-        echo "<script>alert('Please enter the OTP.'); window.history.back();</script>";
+    if (empty($entered_otp) || empty($new_password)) {
+        echo "<script>alert('Please enter both OTP and new password.'); window.history.back();</script>";
         exit();
     }
 
@@ -18,14 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($entered_otp == $_SESSION['otp']) {
         $email = $_SESSION['reset_email'];
 
-        // Update otp_code and is_verified
-        $stmt = $conn->prepare("UPDATE user SET otp_code = NULL, is_verified = 1 WHERE email = ?");
-        $stmt->bind_param("s", $email);
+        // Hash the new password securely
+        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+
+        // Update the password, otp_code, and is_verified
+        $stmt = $conn->prepare("UPDATE user SET password = ?, otp_code = NULL, is_verified = 1 WHERE email = ?");
+        $stmt->bind_param("ss", $hashed_password, $email);
         $stmt->execute();
         $stmt->close();
 
-        // Redirect to password reset form
-        header("Location: Login1.html");
+        // Clear session variables related to reset
+        unset($_SESSION['otp'], $_SESSION['reset_email']);
+
+        // Redirect to login
+        echo "<script>alert('Password updated successfully. Please login.'); window.location.href='Login1.html';</script>";
         exit();
     } else {
         echo "<script>alert('Incorrect OTP. Please try again.'); window.history.back();</script>";
