@@ -1,0 +1,188 @@
+/* Font Definitions */
+@font-face {
+  font-family: 'Inter'; /* Main font family */
+  src: url('fonts/Inter-Regular.woff2') format('woff2'); /* Regular weight */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-SemiBold.woff2') format('woff2'); /* SemiBold weight */
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Bold.woff2') format('woff2'); /* Bold weight */
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'LovedbytheKing'; /* Additional font */
+  src: url('fonts/LovedbytheKing-Regular.woff2') format('woff2');
+}
+
+/* General Body Styles */
+body {
+  font-family: 'Inter', sans-serif; /* Default font for body */
+  margin: 0px; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Header Container Home Styles */
+.header-container-home {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space elements evenly */
+  align-items: center; /* Center items vertically */
+  padding: 100px 40px 0 40px; /* Padding for header */
+  background-color: #F3E9DA; /* Background color */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.header-title {
+  font-weight: 700; /* Bold title */
+  font-size: xx-large; /* Size of the title */
+  color: #333; /* Font color */
+  margin: 0 0 20px 0; /* Margin settings */
+}
+
+.header-title-main {
+  line-height: 0; /* No line height for main title */
+  font-size: xx-large; /* Size for main title */
+}
+
+.header-image {
+  width: 100%; /* Full width on images */
+  max-width: 500px; /* Max width limit */
+  height: auto; /* Maintain aspect ratio */
+  flex: 1 1 300px; /* Flexible sizing */
+}
+
+/* Button Styles */
+.landing-page-button {
+  all: unset; /* Reset button styles */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: inline-block; /* Inline block for button */
+  padding: 20px 50px; /* Padding for button */
+  background-color: #AE88B0; /* Button background color */
+  color: white; /* Text color */
+  border-radius: 10px; /* Rounded corners */
+  font-family: 'Inter', sans-serif; /* Font for button */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-top: 20px; /* Margin on top */
+}
+
+.landing-page-button:hover {
+  background-color: #ddb5df;  /* Darker green on hover */
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Container Browse Styles */
+.header-container-details-browse {
+  background-color: #F3E9DA; /* Background color for browse section */
+  align-items: center; /* Align items center */
+  padding: 20px; /* Padding for container */
+  gap: 20px; /* Space between items */
+  font-family: 'Inter', sans-serif; /* Font for browse section */
+}
+
+.header-container-points {
+  display: flex; /* Flexbox layout */
+  justify-content: space-evenly; /* Even spacing */
+  gap: 20px; /* Gap between points */
+  padding: 40px; /* Padding for container */
+  background-color: #CDE8D5; /* Background color */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.header-container-browse {
+  width: 200px; /* Fixed width for browse items */
+  text-align: center; /* Center text */
+  background-color: #F3E9DA; /* Background color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px; /* Padding for item */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+  flex: 1 1 200px; /* Responsive flex */
+  margin-bottom: 20px; /* Margin below */
+}
+
+.header-container-browse:hover { 
+  transform: translateY(-5px); /* Hover effect */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Shadow on hover */
+}
+
+.header-browser-image {
+  width: 50%; /* Image width in container */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+}
+
+.header-browser-title {
+  font-size: 20px; /* Title size */
+  font-weight: 600; /* SemiBold title */
+  color: #333; /* Title color */
+  margin: 10px 0 5px 0; /* Margin adjustments */
+}
+
+.header-browser-subtitle {
+  font-size: 18px; /* Subtitle size */
+  color: #666; /* Subtitle color */
+  margin: 0; /* No margin */
+}
+
+/* Responsive Media Queries */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .header-container-home {
+    flex-direction: column; /* Stack items vertically */
+    padding: 60px 20px 20px 20px; /* Adjust padding */
+    align-items: center; /* Center items */
+  }
+
+  .header-image {
+    max-width: 80%; /* Max width for images on smaller screens */
+    margin-bottom: 20px; /* Margin below images */
+  }
+
+  .landing-page-button {
+    padding: 15px 40px; /* Reduced padding for button */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .header-container-points {
+    flex-direction: column; /* Stack points vertically */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .header-container-browse {
+    width: 100%; /* Full width for browse items */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .header-container-home {
+    padding-top: 40px; /* Adjust padding */
+  }
+
+  .header-title {
+    font-size: 24px; /* Smaller title size */
+  }
+
+  .landing-page-button {
+    padding: 12px 30px; /* Reduced padding for button */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .header-browser-title {
+    font-size: 18px; /* Adjust title size */
+  }
+
+  .header-browser-subtitle {
+    font-size: 16px; /* Adjust subtitle size */
+  }
+}

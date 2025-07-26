@@ -26,8 +26,8 @@ $isLoggedIn = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] 
 
             <?php if (!$isLoggedIn): ?>
                 <!-- Links for NOT logged-in users -->
-                <li><button class="header-button" onclick="window.location.href='signin.php'">Sign In</button></li>
-                <li><button class="header-button" onclick="window.location.href='signup.php'">Sign Up</button></li>
+                <li><button class="header-button" onclick="window.location.href='/cst22056C/Login/login.html'">Sign In</button></li>
+                <li><button class="header-button" onclick="window.location.href='/cst22056C/Registration/registration.html'">Sign Up</button></li>
             <?php else: ?>
                 <!-- Links for logged-in users -->
                 <li><a href="profile.php">Profile</a></li>
