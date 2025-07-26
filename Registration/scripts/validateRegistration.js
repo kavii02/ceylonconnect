@@ -53,9 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return false;
     }
 
-    // ✅ Password length check
+    // ✅ Password validations
     if (password.length < 6) {
       alert("❌ Password must be at least 6 characters long.");
+      return false;
+    }
+
+    const capitalLetterPattern = /[A-Z]/;
+    if (!capitalLetterPattern.test(password)) {
+      alert("❌ Password must contain at least one capital letter.");
       return false;
     }
 
