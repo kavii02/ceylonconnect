@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat Room - CeylonConnect</title>
+  <link rel="stylesheet" href="styles/chat.css" />
+</head>
+<body>
+
+<div class="chat-container">
+  <div class="chat-header" id="chatHeader">Chat Room</div>
+  <div class="chat-messages" id="chatMessages"></div>
+
+  <form id="chatForm" enctype="multipart/form-data" class="chat-input">
+    <textarea id="messageInput" rows="2" placeholder="Type your message..."></textarea>
+    <input type="file" id="attachment" name="attachment" accept="image/*,application/pdf" />
+    <button type="submit" id="sendBtn">Send</button>
+  </form>
+</div>
+
+<script src="scripts/chat.js"></script>
+</body>
+</html>

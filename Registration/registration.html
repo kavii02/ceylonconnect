@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CeylonConnect - Registration</title>
     <link rel="stylesheet" href="styles/registration.css" />
+    <script src="scripts/validateRegistration.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -20,17 +21,33 @@
         <h1>Create an account</h1>
         <p>Sign up to start sharing skills and goods</p>
 
-        <form action="register.php" method="POST" autocomplete="off">
+        <form
+          name="registerForm"
+          action="register.php"
+          method="POST"
+          autocomplete="off"
+          onsubmit="return validateForm()"
+        >
           <!-- Name -->
           <div class="input-box">
             <span class="icon">👤</span>
-            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+            />
           </div>
 
           <!-- NIC -->
           <div class="input-box">
             <span class="icon">🆔</span>
-            <input type="text" name="nic" placeholder="NIC" required />
+            <input
+              type="text"
+              name="nic"
+              placeholder="NIC (e.g., 123456789V)"
+              required
+            />
           </div>
 
           <!-- Phone -->
@@ -70,7 +87,8 @@
           <button type="submit" class="btn">Sign Up</button>
 
           <p class="login-link">
-            Already have an account? <a href="/ceylonconnect/Login/Login1.html">Log in</a>
+            Already have an account?
+            <a href="/ceylonconnect/Login/Login1.html">Log in</a>
           </p>
         </form>
       </div>
