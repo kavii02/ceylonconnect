@@ -1,8 +1,13 @@
 <?php
-// Start the session at the very beginning of the script
-// This is crucial to access $_SESSION variables
 session_start();
+
+if (!isset($_SESSION['full_name']) || empty($_SESSION['full_name'])) {
+    // Redirect to login page if not logged in
+    header("Location: /ceylonconnect/Login/Login1.html");
+    exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
