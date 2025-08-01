@@ -1,5 +1,11 @@
 <?php
-// post_item.php (No JavaScript Version)
+session_start();
+$user_id = $_SESSION['user_id'] ?? '';
+if (empty($user_id)) {
+    echo "<script>alert('User not logged in.'); window.location.href='/ceylonconnect/Login/Login1.html';</script>";
+    exit();
+}
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -15,18 +21,21 @@ class ItemPost {
         }
     }
 
-    public function post($good_id, $item_name_display, $category, $description, $condition, $photo) {
-        $targetDir = "uploads/";
+    public function post($good_id, $item_name_display, $category, $description, $condition, $photo, $user_id) {
+        $targetDir = "uploads/" . $user_id;
+        $fileName = basename($photo['name']);
 
         if (!is_dir($targetDir)) {
             mkdir($targetDir, 0755, true);
         }
+
+        
         if (!is_writable($targetDir)) {
             return "upload_failed: Uploads directory is not writable. Please set appropriate permissions (e.g., 755 or 777).";
         }
 
         $photoName = basename($photo["name"]);
-        $targetFile = $targetDir . $photoName;
+        $targetFile = $targetDir . "/" . uniqid() . "_" . $fileName;
 
         if ($photo["error"] !== UPLOAD_ERR_OK) {
             switch ($photo["error"]) {
@@ -49,10 +58,9 @@ class ItemPost {
         }
 
         if (move_uploaded_file($photo["tmp_name"], $targetFile)) {
-            // *** IMPORTANT CHANGE 1: REMOVE 'post_id' from the INSERT query's column list ***
             // The database will auto-generate it.
-            $sql = "INSERT INTO post_goods (item_id, item_name, category, description, photo, `condition`)
-                    VALUES (?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO post_goods (item_id, item_name, category, description, photo, `condition`,user_id)
+                    VALUES (?, ?, ?, ?, ?, ?,?)";
 
             $stmt = $this->conn->prepare($sql);
             if ($stmt === false) {
@@ -60,10 +68,9 @@ class ItemPost {
             }
 
             // The bind_param order and types remain the same as 'post_id' is not passed by us
-            $stmt->bind_param("ssssss", $good_id, $item_name_display, $category, $description, $targetFile, $condition);
+            $stmt->bind_param("ssssssi", $good_id, $item_name_display, $category, $description, $targetFile, $condition, $user_id);
 
             if ($stmt->execute()) {
-                // *** IMPORTANT CHANGE 2: Retrieve the auto-generated ID and format it ***
                 $last_inserted_id = $this->conn->insert_id; // Get the raw integer ID
                 $formatted_post_id = 'p_' . sprintf('%02d', $last_inserted_id); // Format as p_01, p_02 etc.
 
@@ -101,7 +108,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_POST['category'],
             $_POST['description'],
             $_POST['condition'],
-            $_FILES['photo']
+            $_FILES['photo'],
+            $user_id
         );
 
         // Update the alert message to show the generated post ID

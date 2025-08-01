@@ -1,8 +1,13 @@
 <?php
-// Start the session at the very beginning of the script
-// This is crucial to access $_SESSION variables
 session_start();
+
+if (!isset($_SESSION['full_name']) || empty($_SESSION['full_name'])) {
+    // Redirect to login page if not logged in
+    header("Location: /ceylonconnect/Login/Login1.html");
+    exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +38,7 @@ session_start();
             <h1 class="header-title-main">for Sharing ICT </h1>
             <h1 class="header-title">Skills and Goods</h1>
             <div class="header-welcome-button-container">
-<button class="landing-page-button" onclick="window.location.href='/ceylonconnect/browse/notifications.html'">
-  Check Your Messages
-</button>
+                <button class="landing-page-button">Check Your Messages</button>
                 <button class="landing-page-button">View Your Reviews</button>
             </div>
         </div>
@@ -46,7 +49,7 @@ session_start();
 
     <div class="header-container-points">
         <div class="header-container-browse">
-            <button onClick="window.location.href='/ceylonconnect/browse/browse.html'" class='browse-button'>
+            <button onClick="window.location.href='/cst22056C/browse/browse.html'" class='browse-button'>
                 <div>
                     <img class="header-browser-image" src="assets/images/Browsing.png" alt="">
                 </div>
@@ -58,7 +61,7 @@ session_start();
         </div>
 
         <div class="header-container-browse">
-            <button onClick="window.location.href='/ceylonconnect/Search/Search.php'" class='browse-button'>
+            <button onClick="window.location.href='/cst22056C/Search/Search.html'" class='browse-button'>
                 <div>
                     <img class="header-browser-image" src="assets/images/searching.png" alt="">
                 </div>
@@ -87,8 +90,8 @@ session_start();
                     <img class="header-browser-image" src="assets/images/ratings.png" alt="">
                 </div>
                 <div class="header-container-details-browse">
-                    <h1 class="header-browser-title">Your Feedbacks</h1>
-                    <p class="header-browser-subtitle">For our future use</p>
+                    <h1 class="header-browser-title">Leave Ratings</h1>
+                    <p class="header-browser-subtitle">Rate your exchange experiences</p>
                 </div>
             </button>
         </div>

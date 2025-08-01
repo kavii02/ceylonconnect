@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $user['password'])) {
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['full_name'] = $user['full_name'];
-                header("Location: ../Home_AfterLogin/HomeAfter.php");
+                header("Location: ../Home_AfterLogIn/HomeAfter.php");
                 exit();
             } else {
                 echo "<script>alert('Incorrect password.'); window.history.back();</script>";
