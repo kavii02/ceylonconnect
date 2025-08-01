@@ -8,7 +8,7 @@ require 'PHPMailer/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$nic = $_SESSION['nic'] ?? '';  // NIC saved earlier during "enter NIC" step
+$nic = $_SESSION['nic'] ?? '';  // NIC stored in earlier step
 $email = trim($_POST['email'] ?? '');
 
 if (empty($nic)) {
@@ -22,40 +22,38 @@ if (empty($email)) {
 }
 
 // DB connection
-$conn = new mysqli("localhost", "root", "Mihini123", "ceylonconnect");
+$conn = new mysqli("localhost", "root", "", "ceylonconnect");
 if ($conn->connect_error) {
     die("DB connection failed: " . $conn->connect_error);
 }
 
-// Check NIC and email match
-$stmt = $conn->prepare("SELECT * FROM user WHERE nic = ? AND email = ?");
+// Check if NIC and email match
+$stmt = $conn->prepare("SELECT * FROM user WHERE nic = ? AND LOWER(email) = LOWER(?)");
 $stmt->bind_param("ss", $nic, $email);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
-    // Generate 4-digit OTP
+    // Generate a 4-digit OTP
     $otp = rand(1000, 9999);
 
-    // Save OTP in DB
-    $update = $conn->prepare("UPDATE user SET otp_code = ? WHERE nic = ? AND email = ?");
+    // Store OTP in DB and mark as not verified
+    $update = $conn->prepare("UPDATE user SET otp_code = ?, is_verified = 0 WHERE nic = ? AND LOWER(email) = LOWER(?)");
     $update->bind_param("sss", $otp, $nic, $email);
     $update->execute();
 
-    // Save OTP and email in session for later verification
+    // Store values in session for verification
     $_SESSION['otp'] = $otp;
     $_SESSION['reset_email'] = $email;
 
-    // Send OTP via email using PHPMailer
+    // Send email using PHPMailer
     $mail = new PHPMailer(true);
-
     try {
-        // SMTP configuration
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'mihini1234weerasekara@gmail.com';       // Your Gmail address
-        $mail->Password = 'viojhbfnzsaxfonz';                      // Your Gmail App Password
+        $mail->Username = 'mihini1234weerasekara@gmail.com';  // your Gmail
+        $mail->Password = 'viojhbfnzsaxfonz';                 // App password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
@@ -64,10 +62,11 @@ if ($result->num_rows === 1) {
 
         $mail->isHTML(true);
         $mail->Subject = 'Your CeylonConnect Password Reset OTP';
-        $mail->Body = "<h3>Your OTP Code is: <b>$otp</b></h3>";
+        $mail->Body    = "<h3>Your OTP Code is: <b>$otp</b></h3>";
 
         $mail->send();
 
+        // Redirect to OTP input form
         header("Location: reset-password-otp.html");
         exit();
     } catch (Exception $e) {
@@ -78,8 +77,5 @@ if ($result->num_rows === 1) {
 }
 
 $stmt->close();
-if (isset($update)) {
-    $update->close();
-}
 $conn->close();
 ?>

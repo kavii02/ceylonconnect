@@ -2,7 +2,7 @@
 // Database connection
 require 'db.php'; 
 
-$conn = new mysqli("localhost", "root", "Mihini123", "ceylonconnect");
+$conn = new mysqli("localhost", "root", "", "ceylonconnect");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

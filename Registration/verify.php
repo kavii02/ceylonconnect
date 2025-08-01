@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$conn = new mysqli("localhost", "root", "Mihini123", "ceylonconnect");
+$conn = new mysqli("localhost", "root", "", "ceylonconnect");
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
