@@ -1,0 +1,321 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;         /* keep aspect ratio */
+    max-width: 120px;    /* prevents extra-wide logos */
+}
+
+.logo-header {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+/* Main Content and Container */
+.main-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Notifications Header and Controls */
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.notifications-header h2 {
+    font-size: 1.8rem;
+    color: #212529;
+    margin: 0;
+}
+
+.notification-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.processed-count {
+    color: #6c757d;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #ced4da;
+}
+
+/* Notification Sections */
+.notifications-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #495057;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Notification Card */
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notification:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Status-based colors */
+.notification.pending {
+    background-color: #fff8e1;
+    border-left: 5px solid #ffc107;
+}
+
+.notification.accepted {
+    background-color: #e2f0e2;
+    border-left: 5px solid #28a745;
+}
+
+.notification.declined {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}
+
+/* Icon */
+.notification .icon {
+    font-size: 1.8rem;
+}
+
+.notification.pending .icon { color: #ffc107; }
+.notification.accepted .icon { color: #28a745; }
+.notification.declined .icon { color: #dc3545; }
+
+/* Notification Content */
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: #343a40;
+}
+
+.status-badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.status-pending { background-color: #ffc107; color: #fff; }
+.status-accepted { background-color: #28a745; color: #fff; }
+.status-declined { background-color: #dc3545; color: #fff; }
+
+.exchange-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.notification-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 8px;
+}
+
+.notification-details i {
+    margin-right: 3px;
+}
+
+.notification-sender strong, .notification-time {
+    color: #495057;
+}
+
+/* Notification Actions */
+.notification-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-action {
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #212529;
+    white-space: nowrap;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+}
+
+.btn-action.view {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-action.chat {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-action.delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px;
+}
+
+.btn-action.delete i {
+    margin-right: 0;
+}
+
+.success-display {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.no-notifications {
+    text-align: center;
+    color: #6c757d;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #e9ecef;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .notification {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .notification-content {
+        width: 100%;
+    }
+    
+    .notification-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .notification-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-action {
+        flex: 1;
+        justify-content: center;
+    }
+}
